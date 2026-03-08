@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Horizonu Health &amp; Education</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./page-base.css" />
+  <link rel="stylesheet" href="./faq.css" />
+</head>
+
+<body class="inner-page faq-page">
+  <input id="menu" class="menu-toggle" type="checkbox" />
+
+  <div class="header-wrap">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="Horizonu Home">
+          <div class="mark" aria-hidden="true">
+            <img src="../images/single_logo.jpg" alt="" class="logo-img" />
+          </div>
+          <div class="brand-title">
+            <strong>Horizonu <br /> Health &amp; Education</strong>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./consultation.html">Consultation</a>
+          <a href="./faq.html" aria-current="page">FAQ</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn btn-ghost" href="#" aria-label="Student login">Login</a>
+          <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
+        </div>
+
+        <label class="burger" for="menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </label>
+
+        <div class="drop">
+          <nav class="nav" aria-label="Mobile Primary">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./consultation.html">Consultation</a>
+            <a href="./faq.html" aria-current="page">FAQ</a>
+            <a href="./contact.html">Contact</a>
+            <a href="#">Student Portal</a>
+          </nav>
+
+          <div class="actions">
+            <a class="btn btn-ghost" href="#">Login</a>
+            <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main class="page-main">
+    <section class="page-hero reveal" aria-labelledby="faqHeroTitle">
+      <div class="page-hero-shell">
+        <div class="page-hero-grid">
+          <div>
+            <p class="hero-kicker">Frequently Asked Questions</p>
+            <h1 class="hero-title" id="faqHeroTitle">Clear answers for students planning their NCLEX path.</h1>
+            <p class="hero-lede">
+              Search the questions below or browse by category to find quick guidance on study timelines, support options,
+              formats, and what to expect from Horizonu programs.
+            </p>
+            <div class="search-shell">
+              <label class="search-label" for="faqSearch">Search questions</label>
+              <input id="faqSearch" class="input-field" type="search" placeholder="Search study plans, payment, virtual sessions..." />
+            </div>
+          </div>
+
+          <aside class="summary-card">
+            <p class="section-kicker">Quick Snapshot</p>
+            <h2 class="summary-title">Common concerns we help solve fast.</h2>
+            <div class="summary-grid">
+              <div class="summary-row">
+                <strong>Best for</strong>
+                <span>RN and PN students preparing for NCLEX</span>
+              </div>
+              <div class="summary-row">
+                <strong>Format</strong>
+                <span>Virtual-first support with guided instruction</span>
+              </div>
+              <div class="summary-row">
+                <strong>Most asked</strong>
+                <span>Timelines, pricing, materials, and practice access</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel-section reveal" aria-labelledby="faqListTitle">
+      <div class="section-head">
+        <p class="section-kicker">Browse by Topic</p>
+        <h2 class="section-title" id="faqListTitle">Find the answer that matches where you are right now.</h2>
+      </div>
+
+      <div class="faq-categories" aria-label="FAQ categories">
+        <button class="faq-category is-active" type="button" data-category="all">All</button>
+        <button class="faq-category" type="button" data-category="study">Study planning</button>
+        <button class="faq-category" type="button" data-category="programs">Programs</button>
+        <button class="faq-category" type="button" data-category="logistics">Logistics</button>
+      </div>
+
+      <div class="split-layout faq-layout">
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item data-category-value="study">
+            <summary>How long should I study before NCLEX?</summary>
+            <div class="faq-answer">The right timeline depends on your content base and test date, but most students do better with a structured plan instead of last-minute cramming. A consultation helps match your timeline to the right intensity.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="programs">
+            <summary>Do you offer one-on-one tutoring?</summary>
+            <div class="faq-answer">Yes. One-on-one tutoring is available for targeted remediation, weak-area review, study planning, and live question walkthroughs.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="logistics">
+            <summary>Do you offer payment plans?</summary>
+            <div class="faq-answer">Payment flexibility can be discussed during consultation based on the program you choose and the level of support you need.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="programs">
+            <summary>Is this for RN and PN students?</summary>
+            <div class="faq-answer">Yes. The platform is suitable for students preparing for RN or PN licensure exams and can be tailored to the stage of preparation.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="programs">
+            <summary>Do you provide study materials?</summary>
+            <div class="faq-answer">Yes. Depending on the service, students can receive study guides, review notes, framework sheets, and question practice resources.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="logistics">
+            <summary>Are sessions virtual or in-person?</summary>
+            <div class="faq-answer">Services are designed around a virtual-first model so students can access support, recordings, and resources from anywhere.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="study">
+            <summary>What if I struggle with prioritization and delegation?</summary>
+            <div class="faq-answer">That is one of the strongest areas of focus. The teaching method centers on ABCs, Maslow, safety standards, and structured question dissection so students gain a repeatable process.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="programs">
+            <summary>Will I get practice questions and rationales?</summary>
+            <div class="faq-answer">Yes. Practice questions, case-style review, and rationales are a core part of the NCLEX-focused experience because they reinforce both knowledge and clinical judgment.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="study">
+            <summary>Can you help if I am still in nursing school?</summary>
+            <div class="faq-answer">Yes. Pre-NCLEX support is available for Med-Surg, pharmacology, dosage calculations, HESI and ATI preparation, and general clinical readiness coaching.</div>
+          </details>
+
+          <details class="faq-item" data-faq-item data-category-value="logistics">
+            <summary>What happens during a free consultation?</summary>
+            <div class="faq-answer">You will discuss your exam timeline, current weak areas, study habits, and which service track best fits your goals. The goal is to leave with clarity and a recommended next step.</div>
+          </details>
+        </div>
+
+        <aside class="faq-side-card">
+          <p class="section-kicker">Need More Help?</p>
+          <h2 class="section-title">If you do not see your question, send it directly.</h2>
+          <p class="summary-copy">
+            Some students need help choosing between tutoring, coaching, or bootcamp support. A direct message is the fastest way to sort that out.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="./contact.html">Contact Us</a>
+            <a class="btn btn-ghost" href="./consultation.html">Book Consultation</a>
+          </div>
+          <p class="empty-state" id="faqEmpty" hidden>No matching questions yet. Try a broader term or switch back to All.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="Horizonu Home">
+            <img src="../images/logo.jpg" alt="Horizonu" />
+          </a>
+          <p class="footer-text">
+            Horizonu Health &amp; Education gives nursing students a clearer way to prepare through strategy-led review,
+            focused tutoring, and practical support.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Programs</h3>
+          <ul class="footer-links">
+            <li><a href="./services.html">NCLEX Bootcamp</a></li>
+            <li><a href="./services.html">1-on-1 Tutoring</a></li>
+            <li><a href="./services.html">Group Coaching</a></li>
+            <li><a href="./consultation.html">Free Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:hello@horizonu.com">hello@horizonu.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </li>
+            <li>
+              <span class="contact-label">Hours</span>
+              <span>Mon-Fri | 9am-5pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">(c) <span id="year"></span> Horizonu Health &amp; Education. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span class="dot">|</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./faq.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+body.consultation-page {
+  --page-accent: #0f9aa1;
+  --page-accent-2: #9fe3dc;
+}
+
+.consult-grid {
+  align-items: stretch;
+}
+
+.consult-card {
+  padding: clamp(22px, 3vw, 30px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.consult-card h3 {
+  margin: 18px 0 12px;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.consult-card p {
+  margin: 0;
+  line-height: 1.75;
+  color: rgba(11, 31, 59, 0.76);
+}
+
+.consult-tag {
+  width: fit-content;
+  background: rgba(14, 165, 164, 0.12);
+}
+
+.consult-option {
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.consult-option.is-selected {
+  background: linear-gradient(180deg, rgba(244, 252, 251, 0.98), rgba(255, 255, 255, 0.96));
+  border-color: rgba(14, 165, 164, 0.32);
+  transform: translateY(-2px);
+}
+
+.booking-layout,
+.step-list {
+  align-items: start;
+}
+
+.step-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.step-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.step-row .step-number {
+  background: var(--page-soft);
+}

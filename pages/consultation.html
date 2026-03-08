@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultation | Horizonu Health &amp; Education</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./page-base.css" />
+  <link rel="stylesheet" href="./consultation.css" />
+</head>
+
+<body class="inner-page consultation-page">
+  <input id="menu" class="menu-toggle" type="checkbox" />
+
+  <div class="header-wrap">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="Horizonu Home">
+          <div class="mark" aria-hidden="true">
+            <img src="../images/single_logo.jpg" alt="" class="logo-img" />
+          </div>
+          <div class="brand-title">
+            <strong>Horizonu <br /> Health &amp; Education</strong>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./consultation.html" aria-current="page">Consultation</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn btn-ghost" href="#" aria-label="Student login">Login</a>
+          <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
+        </div>
+
+        <label class="burger" for="menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </label>
+
+        <div class="drop">
+          <nav class="nav" aria-label="Mobile Primary">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./consultation.html" aria-current="page">Consultation</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./contact.html">Contact</a>
+            <a href="#">Student Portal</a>
+          </nav>
+
+          <div class="actions">
+            <a class="btn btn-ghost" href="#">Login</a>
+            <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main class="page-main">
+    <section class="page-hero reveal" aria-labelledby="consultHeroTitle">
+      <div class="page-hero-shell">
+        <div class="page-hero-grid">
+          <div>
+            <p class="hero-kicker">Strategy Consultation</p>
+            <h1 class="hero-title" id="consultHeroTitle">A focused planning session for students who need the right next move.</h1>
+            <p class="hero-lede">
+              Book a consultation to assess strengths, weak areas, exam timing, and the support path that will actually
+              move you forward.
+            </p>
+            <div class="chip-row">
+              <span class="chip">1:1 tutoring booking</span>
+              <span class="chip">Strategy consultation</span>
+              <span class="chip">Intensive cram session</span>
+              <span class="chip">Review course enrollment</span>
+            </div>
+          </div>
+
+          <aside class="glass-card">
+            <p class="section-kicker">What You Leave With</p>
+            <h2 class="section-title">Clarity on timeline, service fit, and where to focus first.</h2>
+            <ul class="check-list">
+              <li>A clearer understanding of your current readiness level</li>
+              <li>A recommendation for the strongest support model</li>
+              <li>A strategy-first roadmap tailored to your timeline</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel-section reveal" aria-labelledby="optionTitle">
+      <div class="section-head">
+        <p class="section-kicker">Consultation Options</p>
+        <h2 class="section-title" id="optionTitle">Different students need different levels of urgency and support.</h2>
+      </div>
+
+      <div class="four-up consult-grid">
+        <article class="consult-card consult-option" data-package="Strategy Consultation">
+          <span class="consult-tag">Best start</span>
+          <h3>Strategy Consultation</h3>
+          <p>Ideal for students who need a study plan, service recommendation, and guidance on where to focus first.</p>
+        </article>
+        <article class="consult-card consult-option" data-package="1:1 Tutoring Booking">
+          <span class="consult-tag">Targeted help</span>
+          <h3>1:1 Tutoring Booking</h3>
+          <p>For students ready to begin personalized tutoring around weak areas, question strategy, or remediation.</p>
+        </article>
+        <article class="consult-card consult-option" data-package="Intensive Cram Session">
+          <span class="consult-tag">Short timeline</span>
+          <h3>Intensive Cram Session</h3>
+          <p>A concentrated support lane for students approaching exam day who need high-yield focus fast.</p>
+        </article>
+        <article class="consult-card consult-option" data-package="Review Course Enrollment">
+          <span class="consult-tag">Full structure</span>
+          <h3>Review Course Enrollment</h3>
+          <p>Best for students who want a complete learning experience with guided review, practice, and accountability.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel-section reveal" aria-labelledby="bookingTitle">
+      <div class="split-layout booking-layout">
+        <form class="form-shell" aria-labelledby="bookingTitle">
+          <div class="section-head">
+            <p class="section-kicker">Booking Form</p>
+            <h2 class="section-title" id="bookingTitle">Tell us where you are and what kind of support you want.</h2>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="consultPackage">Consultation type</label>
+              <select id="consultPackage" class="select-field" name="package">
+                <option value="">Choose a consultation type</option>
+                <option>Strategy Consultation</option>
+                <option>1:1 Tutoring Booking</option>
+                <option>Intensive Cram Session</option>
+                <option>Review Course Enrollment</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="consultTimeline">Exam timeline</label>
+              <select id="consultTimeline" class="select-field" name="timeline">
+                <option value="">Choose your timeline</option>
+                <option>Within 2 weeks</option>
+                <option>Within 1 month</option>
+                <option>Within 2 to 3 months</option>
+                <option>More than 3 months out</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="consultName">Name</label>
+              <input id="consultName" class="input-field" name="name" type="text" placeholder="Your full name" />
+            </div>
+            <div class="field">
+              <label for="consultEmail">Email</label>
+              <input id="consultEmail" class="input-field" name="email" type="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="consultGoals">Main goal for this session</label>
+            <textarea id="consultGoals" class="textarea-field" name="goals" placeholder="Describe what is hardest right now and what a successful consultation would help you solve."></textarea>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="submit">Request Consultation</button>
+            <a class="btn btn-ghost" href="./services.html">Compare Services</a>
+          </div>
+        </form>
+
+        <aside class="summary-card sticky">
+          <p class="section-kicker">Planning Summary</p>
+          <h2 class="summary-title">Your consultation preview.</h2>
+          <div class="summary-grid">
+            <div class="summary-row">
+              <strong>Consultation type</strong>
+              <span data-booking="package">Choose an option</span>
+            </div>
+            <div class="summary-row">
+              <strong>Timeline</strong>
+              <span data-booking="timeline">Select your exam window</span>
+            </div>
+            <div class="summary-row">
+              <strong>Name</strong>
+              <span data-booking="name">Not added yet</span>
+            </div>
+            <div class="summary-row">
+              <strong>Email</strong>
+              <span data-booking="email">Not added yet</span>
+            </div>
+            <div class="summary-row">
+              <strong>Main goal</strong>
+              <span data-booking="goals">Waiting for your focus area</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel-section reveal" aria-labelledby="includedTitle">
+      <div class="split-layout">
+        <article class="surface-card">
+          <p class="section-kicker">What Happens Next</p>
+          <h2 class="section-title" id="includedTitle">From consultation to confidence in four moves.</h2>
+          <div class="step-list">
+            <div class="step-row">
+              <span class="step-number">01</span>
+              <div class="step-copy">We assess your strengths, weak areas, and exam timeline.</div>
+            </div>
+            <div class="step-row">
+              <span class="step-number">02</span>
+              <div class="step-copy">You receive a recommendation for the support path that fits you best.</div>
+            </div>
+            <div class="step-row">
+              <span class="step-number">03</span>
+              <div class="step-copy">Your plan centers on question strategy, critical thinking, and safety prioritization.</div>
+            </div>
+            <div class="step-row">
+              <span class="step-number">04</span>
+              <div class="step-copy">You move forward with more structure, less overwhelm, and stronger readiness.</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="surface-card">
+          <p class="section-kicker">Student Portal Support</p>
+          <h2 class="section-title">Consultations can connect you to a larger digital learning ecosystem.</h2>
+          <ul class="benefit-list">
+            <li>Recorded lessons and topic libraries for Med-Surg, Pharm, OB, Psych, and more</li>
+            <li>Question lab features with timed quizzes, mixed mode, and rationales</li>
+            <li>Study resources like lab values, calendars, and prioritization sheets</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="Horizonu Home">
+            <img src="../images/logo.jpg" alt="Horizonu" />
+          </a>
+          <p class="footer-text">
+            A consultation is the fastest way to align your exam timeline, weak areas, and the support level that will
+            move you forward.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Programs</h3>
+          <ul class="footer-links">
+            <li><a href="./services.html">NCLEX Bootcamp</a></li>
+            <li><a href="./services.html">1-on-1 Tutoring</a></li>
+            <li><a href="./services.html">Group Coaching</a></li>
+            <li><a href="./consultation.html">Free Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:hello@horizonu.com">hello@horizonu.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </li>
+            <li>
+              <span class="contact-label">Hours</span>
+              <span>Mon-Fri | 9am-5pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">(c) <span id="year"></span> Horizonu Health &amp; Education. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span class="dot">|</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./consultation.js" defer></script>
+</body>
+
+</html>

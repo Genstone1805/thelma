@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Horizonu Health &amp; Education</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./page-base.css" />
+  <link rel="stylesheet" href="./contact.css" />
+</head>
+
+<body class="inner-page contact-page">
+  <input id="menu" class="menu-toggle" type="checkbox" />
+
+  <div class="header-wrap">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html" aria-label="Horizonu Home">
+          <div class="mark" aria-hidden="true">
+            <img src="../images/single_logo.jpg" alt="" class="logo-img" />
+          </div>
+          <div class="brand-title">
+            <strong>Horizonu <br /> Health &amp; Education</strong>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./consultation.html">Consultation</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./contact.html" aria-current="page">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn btn-ghost" href="#" aria-label="Student login">Login</a>
+          <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
+        </div>
+
+        <label class="burger" for="menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </label>
+
+        <div class="drop">
+          <nav class="nav" aria-label="Mobile Primary">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./consultation.html">Consultation</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./contact.html" aria-current="page">Contact</a>
+            <a href="#">Student Portal</a>
+          </nav>
+
+          <div class="actions">
+            <a class="btn btn-ghost" href="#">Login</a>
+            <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main class="page-main">
+    <section class="page-hero reveal" aria-labelledby="contactHeroTitle">
+      <div class="page-hero-shell">
+        <div class="page-hero-grid">
+          <div>
+            <p class="hero-kicker">Contact Page</p>
+            <h1 class="hero-title" id="contactHeroTitle">Start your NCLEX success journey today.</h1>
+            <p class="hero-lede">
+              Use the contact form to share your nursing program, exam date, and what support you need. We will point you
+              toward the clearest next step.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Quick consultation requests</span>
+              <span class="chip">Program questions</span>
+              <span class="chip">Support for RN and PN students</span>
+            </div>
+          </div>
+
+          <aside class="summary-card">
+            <p class="section-kicker">Contact Snapshot</p>
+            <h2 class="summary-title">What to include for the fastest response.</h2>
+            <div class="summary-grid">
+              <div class="summary-row">
+                <strong>Nursing program</strong>
+                <span>RN, PN, bridge, or current course focus</span>
+              </div>
+              <div class="summary-row">
+                <strong>NCLEX date</strong>
+                <span>Your planned exam window or target timeline</span>
+              </div>
+              <div class="summary-row">
+                <strong>Main challenge</strong>
+                <span>Content gaps, strategy, prioritization, or confidence</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel-section reveal" aria-labelledby="contactFormTitle">
+      <div class="split-layout contact-layout">
+        <div class="contact-stack">
+          <article class="contact-card">
+            <div class="contact-icon">01</div>
+            <h2 class="section-title">Reach out with your exam context.</h2>
+            <p class="contact-note">Tell us your nursing program, your target test date, and the biggest issue holding you back right now.</p>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">02</div>
+            <h2 class="section-title">Receive a focused reply.</h2>
+            <p class="contact-note">You will be guided toward the best next step, whether that is a consultation, tutoring session, or program recommendation.</p>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">03</div>
+            <h2 class="section-title">Move forward with a plan.</h2>
+            <p class="contact-note">The goal is not just to answer questions. It is to reduce confusion and help you prepare strategically.</p>
+          </article>
+        </div>
+
+        <div class="split-layout form-layout">
+          <form class="form-shell" aria-labelledby="contactFormTitle">
+            <div class="section-head">
+              <p class="section-kicker">Contact Form</p>
+              <h2 class="section-title" id="contactFormTitle">Tell us about your situation.</h2>
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="contactName">Name</label>
+                <input id="contactName" class="input-field" name="name" type="text" placeholder="Your full name" />
+              </div>
+              <div class="field">
+                <label for="contactEmail">Email</label>
+                <input id="contactEmail" class="input-field" name="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="contactProgram">Nursing Program</label>
+                <select id="contactProgram" class="select-field" name="program">
+                  <option value="">Select program</option>
+                  <option>RN Program</option>
+                  <option>PN Program</option>
+                  <option>BSN Program</option>
+                  <option>Bridge Program</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="contactDate">NCLEX Date</label>
+                <input id="contactDate" class="input-field" name="date" type="date" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" class="textarea-field" name="message" placeholder="Tell us what you need help with, what has felt hardest, and what kind of support you are considering."></textarea>
+              <p class="char-count"><span id="messageCount">0</span>/500 characters</p>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="submit">Schedule Consultation</button>
+              <a class="btn btn-ghost" href="./faq.html">Read FAQ</a>
+            </div>
+          </form>
+
+          <aside class="summary-card sticky">
+            <p class="section-kicker">Inquiry Snapshot</p>
+            <h2 class="summary-title">Live summary of your message.</h2>
+            <div class="summary-grid">
+              <div class="summary-row">
+                <strong>Name</strong>
+                <span data-summary="name">Not added yet</span>
+              </div>
+              <div class="summary-row">
+                <strong>Email</strong>
+                <span data-summary="email">Not added yet</span>
+              </div>
+              <div class="summary-row">
+                <strong>Program</strong>
+                <span data-summary="program">Not selected yet</span>
+              </div>
+              <div class="summary-row">
+                <strong>NCLEX Date</strong>
+                <span data-summary="date">Not selected yet</span>
+              </div>
+              <div class="summary-row">
+                <strong>Message Focus</strong>
+                <span data-summary="message">Waiting for your details</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="Horizonu Home">
+            <img src="../images/logo.jpg" alt="Horizonu" />
+          </a>
+          <p class="footer-text">
+            Reach out when you need clarity on the right support model, your study plan, or the best next move for your
+            exam timeline.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Programs</h3>
+          <ul class="footer-links">
+            <li><a href="./services.html">NCLEX Bootcamp</a></li>
+            <li><a href="./services.html">1-on-1 Tutoring</a></li>
+            <li><a href="./services.html">Group Coaching</a></li>
+            <li><a href="./consultation.html">Free Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:hello@horizonu.com">hello@horizonu.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </li>
+            <li>
+              <span class="contact-label">Hours</span>
+              <span>Mon-Fri | 9am-5pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">(c) <span id="year"></span> Horizonu Health &amp; Education. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span class="dot">|</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./contact.js" defer></script>
+</body>
+
+</html>
