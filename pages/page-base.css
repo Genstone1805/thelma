@@ -13,7 +13,7 @@ body.inner-page {
   margin: 0;
   color: var(--page-ink);
   background: var(--page-soft);
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body.inner-page a {
@@ -43,7 +43,7 @@ body.inner-page h3,
 body.inner-page h4 {
   margin: 0;
   color: var(--page-heading);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: -0.03em;
 }
 
@@ -273,7 +273,7 @@ body.inner-page h4 {
 .metric-value {
   display: block;
   color: var(--page-heading);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: clamp(34px, 4vw, 48px);
 }
 
