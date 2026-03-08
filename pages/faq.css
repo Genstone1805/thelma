@@ -1,9 +1,11 @@
 .faq-list {
   display: grid;
   gap: 14px;
+  align-items: stretch;
 }
 
 .faq-item {
+  width: 100%;
   padding: 0 22px;
   overflow: hidden;
 }
@@ -12,9 +14,9 @@
   list-style: none;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 16px;
+  min-height: 68px;
   padding: 20px 0;
   color: var(--page-heading);
   font-weight: 700;
@@ -23,6 +25,7 @@
 .faq-item summary::after {
   content: "+";
   flex: 0 0 auto;
+  margin-left: auto;
   color: currentColor;
   font-size: 24px;
   line-height: 1;
