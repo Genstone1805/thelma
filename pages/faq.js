@@ -2,63 +2,81 @@
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  const prefersReduced =
-    window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const revealItems = Array.from(document.querySelectorAll(".reveal"));
-  if ("IntersectionObserver" in window && !prefersReduced) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
+  const items = Array.from(document.querySelectorAll(".faq-item"));
+
+  items.forEach((item) => {
+    const summary = item.querySelector("summary");
+    const answer = item.querySelector(".faq-answer");
+
+    if (!summary || !answer) return;
+
+    let isAnimating = false;
+
+    function syncState(open) {
+      item.classList.toggle("is-open", open);
+      summary.setAttribute("aria-expanded", open ? "true" : "false");
+      answer.style.opacity = open ? "1" : "0";
+      answer.style.height = open ? "auto" : "0px";
+    }
+
+    if (item.open) {
+      syncState(true);
+    } else {
+      syncState(false);
+    }
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (isAnimating) return;
+
+      const opening = !item.open;
+
+      if (reducedMotion) {
+        item.open = opening;
+        syncState(opening);
+        return;
+      }
+
+      isAnimating = true;
+
+      if (opening) {
+        item.open = true;
+        item.classList.add("is-open");
+        summary.setAttribute("aria-expanded", "true");
+        answer.style.height = "0px";
+        answer.style.opacity = "0";
+
+        window.requestAnimationFrame(() => {
+          answer.style.height = `${answer.scrollHeight}px`;
+          answer.style.opacity = "1";
         });
-      },
-      { threshold: 0.18 },
-    );
+      } else {
+        answer.style.height = `${answer.scrollHeight}px`;
+        item.classList.remove("is-open");
+        summary.setAttribute("aria-expanded", "false");
 
-    revealItems.forEach((item) => io.observe(item));
-  } else {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-  }
+        window.requestAnimationFrame(() => {
+          answer.style.height = "0px";
+          answer.style.opacity = "0";
+        });
+      }
 
-  const search = document.getElementById("faqSearch");
-  const buttons = Array.from(document.querySelectorAll("[data-category]"));
-  const items = Array.from(document.querySelectorAll("[data-faq-item]"));
-  const emptyState = document.getElementById("faqEmpty");
+      const handleTransitionEnd = (transitionEvent) => {
+        if (transitionEvent.propertyName !== "height") return;
 
-  let activeCategory = "all";
+        answer.removeEventListener("transitionend", handleTransitionEnd);
+        isAnimating = false;
 
-  const applyFilters = () => {
-    const term = (search?.value || "").trim().toLowerCase();
-    let visibleCount = 0;
+        if (opening) {
+          answer.style.height = "auto";
+        } else {
+          item.open = false;
+        }
+      };
 
-    items.forEach((item) => {
-      const category = item.getAttribute("data-category-value") || "all";
-      const text = item.textContent?.toLowerCase() || "";
-      const matchesCategory = activeCategory === "all" || category === activeCategory;
-      const matchesTerm = !term || text.includes(term);
-      const visible = matchesCategory && matchesTerm;
-      item.classList.toggle("is-hidden", !visible);
-      if (visible) visibleCount += 1;
-    });
-
-    if (emptyState) emptyState.hidden = visibleCount !== 0;
-  };
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      activeCategory = button.dataset.category || "all";
-      buttons.forEach((item) =>
-        item.classList.toggle("is-active", item === button),
-      );
-      applyFilters();
+      answer.addEventListener("transitionend", handleTransitionEnd);
     });
   });
-
-  search?.addEventListener("input", applyFilters);
-  applyFilters();
 })();

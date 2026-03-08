@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +8,25 @@
   <link rel="stylesheet" href="./page-base.css" />
   <link rel="stylesheet" href="./services.css" />
 </head>
-
 <body class="inner-page services-page">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-meta">
+        <span>hello@horizonu.com</span>
+        <span>Mon-Fri | 9am-5pm</span>
+        <span>Virtual support for RN and PN students</span>
+      </div>
+      <a href="./consultation.html">Book a consultation</a>
+    </div>
+  </div>
   <input id="menu" class="menu-toggle" type="checkbox" />
-
   <div class="header-wrap">
     <header class="header">
       <div class="header-inner">
         <a class="brand" href="../index.html" aria-label="Horizonu Home">
-          <div class="mark" aria-hidden="true">
-            <img src="../images/single_logo.jpg" alt="" class="logo-img" />
-          </div>
-          <div class="brand-title">
-            <strong>Horizonu <br /> Health &amp; Education</strong>
-          </div>
+          <div class="mark" aria-hidden="true"><img src="../images/single_logo.jpg" alt="" class="logo-img" /></div>
+          <div class="brand-title"><strong>Horizonu <br /> Health &amp; Education</strong></div>
         </a>
-
         <nav class="nav" aria-label="Primary">
           <a href="../index.html">Home</a>
           <a href="./about.html">About</a>
@@ -33,16 +35,11 @@
           <a href="./faq.html">FAQ</a>
           <a href="./contact.html">Contact</a>
         </nav>
-
         <div class="actions">
-          <a class="btn btn-ghost" href="#" aria-label="Student login">Login</a>
+          <a class="btn btn-ghost" href="#">Login</a>
           <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
         </div>
-
-        <label class="burger" for="menu" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </label>
-
+        <label class="burger" for="menu" aria-label="Open menu"><span></span><span></span><span></span></label>
         <div class="drop">
           <nav class="nav" aria-label="Mobile Primary">
             <a href="../index.html">Home</a>
@@ -51,9 +48,7 @@
             <a href="./consultation.html">Consultation</a>
             <a href="./faq.html">FAQ</a>
             <a href="./contact.html">Contact</a>
-            <a href="#">Student Portal</a>
           </nav>
-
           <div class="actions">
             <a class="btn btn-ghost" href="#">Login</a>
             <a class="btn btn-primary" href="./consultation.html">Free Consultation</a>
@@ -64,215 +59,86 @@
   </div>
 
   <main class="page-main">
-    <section class="page-hero reveal" aria-labelledby="servicesHeroTitle">
+    <section class="page-hero">
       <div class="page-hero-shell">
         <div class="page-hero-grid">
           <div>
-            <p class="hero-kicker">NCLEX Review Programs</p>
-            <h1 class="hero-title" id="servicesHeroTitle">Choose the right level of structure, accountability, and strategy.</h1>
-            <p class="hero-lede">
-              Each service is designed to help nursing students strengthen weak areas, sharpen clinical judgment, and
-              prepare with a clear plan instead of scattered review.
-            </p>
+            <p class="hero-kicker">Our Services</p>
+            <h1 class="hero-title">Support options designed for different stages of study and preparation.</h1>
+            <p class="hero-lede">Choose the service that best matches your timeline, learning needs, and desired level of structure.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="./consultation.html">Find Your Best Fit</a>
               <a class="btn btn-ghost" href="./contact.html">Ask a Question</a>
             </div>
-            <div class="chip-row">
-              <span class="chip">Bootcamp structure</span>
-              <span class="chip">1:1 tutoring</span>
-              <span class="chip">Group coaching</span>
-              <span class="chip">Pre-NCLEX support</span>
-            </div>
           </div>
-
-          <aside class="glass-card">
-            <p class="section-kicker">How It Works</p>
-            <h2 class="section-title">Strategy first. Content second. Confidence throughout.</h2>
-            <ul class="check-list">
-              <li>Assess weak areas, exam timeline, and learning style.</li>
-              <li>Match students with a structured roadmap and service track.</li>
-              <li>Use high-yield review, question practice, and rationales to close gaps quickly.</li>
-              <li>Build readiness through accountability and focused support.</li>
-            </ul>
-          </aside>
+          <div class="hero-photo-card">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Healthcare educator with a student" />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="panel-section reveal" aria-labelledby="serviceTrackTitle">
-      <div class="section-head">
-        <p class="section-kicker">Program Tracks</p>
-        <h2 class="section-title" id="serviceTrackTitle">Explore every service lane from NCLEX prep to nursing school support.</h2>
-        <p class="section-lede">Use the filter to focus on exam prep programs or pre-NCLEX tutoring support.</p>
-      </div>
-
-      <div class="filter-bar" aria-label="Service filters">
-        <button class="filter-button is-active" type="button" data-filter="all">All services</button>
-        <button class="filter-button" type="button" data-filter="nclex">NCLEX programs</button>
-        <button class="filter-button" type="button" data-filter="support">Nursing school support</button>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card-page featured" data-track="nclex">
-          <span class="service-ribbon">Most Popular</span>
-          <h3>Comprehensive NCLEX Bootcamp</h3>
-          <p class="program-note">A guided review experience built for students who want structure, strategy, and consistent momentum.</p>
+    <section class="panel-section">
+      <div class="three-up">
+        <article class="service-card-page">
+          <img class="service-thumb" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80" alt="Students studying together" />
+          <p class="section-kicker">Most Comprehensive</p>
+          <h2 class="section-title">NCLEX Bootcamp</h2>
+          <p>Structured review with guided teaching, question practice, and consistent accountability.</p>
           <ul class="detail-list">
-            <li>High-yield content review</li>
+            <li>High-yield review</li>
             <li>Test-taking strategies</li>
-            <li>Prioritization and delegation mastery</li>
-            <li>Case study breakdowns</li>
-            <li>Practice question sessions</li>
+            <li>Question sessions</li>
           </ul>
         </article>
-
-        <article class="service-card-page" data-track="nclex">
-          <span class="service-ribbon">1:1 Support</span>
-          <h3>One-on-One NCLEX Tutoring</h3>
-          <p class="program-note">Personalized sessions for students who need targeted remediation and a tighter study system.</p>
+        <article class="service-card-page">
+          <img class="service-thumb" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Nurse mentor with student" />
+          <p class="section-kicker">Targeted Help</p>
+          <h2 class="section-title">One-on-One Tutoring</h2>
+          <p>Personalized support for students who need focused help with weak areas or strategy.</p>
           <ul class="detail-list">
-            <li>Personalized study plan</li>
-            <li>Weak-area identification</li>
-            <li>Remediation strategies</li>
-            <li>Live question walkthroughs</li>
+            <li>Study plan guidance</li>
+            <li>Targeted remediation</li>
+            <li>Live walkthroughs</li>
           </ul>
         </article>
-
-        <article class="service-card-page" data-track="nclex">
-          <span class="service-ribbon">Weekly Coaching</span>
-          <h3>Group NCLEX Coaching</h3>
-          <p class="program-note">A collaborative option for learners who want guided review, strategy repetition, and accountability.</p>
+        <article class="service-card-page">
+          <img class="service-thumb" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Student in online learning session" />
+          <p class="section-kicker">Weekly Structure</p>
+          <h2 class="section-title">Group Coaching</h2>
+          <p>Guided weekly support for students who want consistency and shared momentum while preparing.</p>
           <ul class="detail-list">
-            <li>Weekly live sessions</li>
-            <li>Strategy-focused review</li>
-            <li>High-yield topics</li>
+            <li>Weekly sessions</li>
+            <li>Topic review</li>
             <li>Accountability support</li>
           </ul>
         </article>
-
-        <article class="service-card-page" data-track="support">
-          <span class="service-ribbon">Pre-NCLEX</span>
-          <h3>Med-Surg Tutoring</h3>
-          <p class="program-note">Build stronger clinical reasoning before graduation with focused concept tutoring and application practice.</p>
-          <ul class="detail-list">
-            <li>Cardio, respiratory, endocrine, renal, GI, neuro, and more</li>
-            <li>Question-based remediation</li>
-            <li>Case-style application support</li>
-          </ul>
-        </article>
-
-        <article class="service-card-page" data-track="support">
-          <span class="service-ribbon">Pre-NCLEX</span>
-          <h3>Pharmacology Breakdown</h3>
-          <p class="program-note">Clear drug-class instruction focused on NCLEX traps, safety alerts, and memory anchors that stick.</p>
-          <ul class="detail-list">
-            <li>Cardiac, endocrine, psych, OB, and antibiotic review</li>
-            <li>Medication safety emphasis</li>
-            <li>Study guides and recall tools</li>
-          </ul>
-        </article>
-
-        <article class="service-card-page" data-track="support">
-          <span class="service-ribbon">Skill Builder</span>
-          <h3>Dosage Calculation Mastery</h3>
-          <p class="program-note">A focused support block for students who want stronger speed, setup, and calculation confidence.</p>
-          <ul class="detail-list">
-            <li>Formula setup drills</li>
-            <li>Common medication math problem types</li>
-            <li>Accuracy-building practice</li>
-          </ul>
-        </article>
-
-        <article class="service-card-page" data-track="support">
-          <span class="service-ribbon">Exam Prep</span>
-          <h3>HESI and ATI Preparation</h3>
-          <p class="program-note">Review sessions designed to strengthen school-based exit exam performance and clinical decision-making.</p>
-          <ul class="detail-list">
-            <li>Targeted concept review</li>
-            <li>Question practice with rationales</li>
-            <li>Weak-area remediation</li>
-          </ul>
-        </article>
-
-        <article class="service-card-page" data-track="support">
-          <span class="service-ribbon">Confidence Builder</span>
-          <h3>Clinical Readiness Coaching</h3>
-          <p class="program-note">Coaching support for students who want to feel more prepared before clinicals, finals, or transition-to-practice.</p>
-          <ul class="detail-list">
-            <li>Prioritization mindset</li>
-            <li>Communication and safety coaching</li>
-            <li>Structured preparation plans</li>
-          </ul>
-        </article>
       </div>
     </section>
 
-    <section class="panel-section reveal" aria-labelledby="digitalTitle">
-      <div class="section-head">
-        <p class="section-kicker">Digital Learning Experience</p>
-        <h2 class="section-title" id="digitalTitle">Programs are backed by a student portal built for focused practice.</h2>
-      </div>
-
-      <div class="three-up portal-grid">
-        <article class="surface-card portal-card">
-          <h3>Member Dashboard</h3>
-          <p>Students can access recordings, study materials, recent lessons, upcoming live sessions, and progress visibility from one place.</p>
-        </article>
-        <article class="surface-card portal-card">
-          <h3>NCLEX Question Lab</h3>
-          <p>Timed quizzes, mixed exam mode, rationales after each question, SATA practice, and subject-specific review make question practice more intentional.</p>
-        </article>
-        <article class="surface-card portal-card">
-          <h3>Resource Library</h3>
-          <p>Study calendars, lab value sheets, pharmacology memory guides, isolation charts, and prioritization frameworks support daily review.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel-section reveal" aria-labelledby="fitTitle">
+    <section class="panel-section">
       <div class="split-layout">
         <article class="surface-card">
-          <p class="section-kicker">Need Help Choosing?</p>
-          <h2 class="section-title" id="fitTitle">Match the service to the stage you are in right now.</h2>
-          <div class="fit-list">
-            <div class="fit-row">
-              <strong>Need full structure?</strong>
-              <span>Start with the Comprehensive NCLEX Bootcamp.</span>
-            </div>
-            <div class="fit-row">
-              <strong>Need targeted remediation?</strong>
-              <span>Book one-on-one tutoring to fix specific weak areas faster.</span>
-            </div>
-            <div class="fit-row">
-              <strong>Need accountability?</strong>
-              <span>Group coaching keeps you engaged and consistent week to week.</span>
-            </div>
-            <div class="fit-row">
-              <strong>Still in nursing school?</strong>
-              <span>Use pre-NCLEX support to strengthen the core content early.</span>
-            </div>
-          </div>
-        </article>
-
-        <aside class="glass-card">
-          <p class="section-kicker">Booking Options</p>
-          <h2 class="section-title">Consultations, cram sessions, tutoring, and course enrollment all start with one clear conversation.</h2>
-          <ul class="check-list">
-            <li>1:1 tutoring booking</li>
-            <li>Strategy consultation</li>
-            <li>Intensive cram session</li>
-            <li>Faculty-led review course enrollment</li>
+          <p class="section-kicker">Additional Support</p>
+          <h2 class="section-title">Help is also available for students who are still building a strong foundation.</h2>
+          <ul class="benefit-list">
+            <li>Med-Surg tutoring</li>
+            <li>Pharmacology breakdown</li>
+            <li>Dosage calculation mastery</li>
+            <li>HESI and ATI preparation</li>
+            <li>Clinical readiness coaching</li>
           </ul>
-        </aside>
+        </article>
+        <div class="image-frame">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80" alt="Healthcare learner reviewing notes" />
+        </div>
       </div>
     </section>
 
-    <section class="cta-section reveal">
+    <section class="cta-section">
       <div class="cta-band">
-        <p class="section-kicker">Ready to Start</p>
-        <h2 class="section-title">Book a consultation and we will map the right program to your timeline and goals.</h2>
-        <p class="section-lede">The first step is clarity: where you are, what is holding you back, and what support closes the gap fastest.</p>
+        <p class="section-kicker">Begin Here</p>
+        <h2 class="section-title">If you are unsure which service fits you best, start with a consultation.</h2>
         <div class="hero-actions">
           <a class="btn btn-primary" href="./consultation.html">Schedule Consultation</a>
           <a class="btn btn-ghost" href="./contact.html">Contact Us</a>
@@ -285,15 +151,9 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-col footer-brand">
-          <a class="footer-logo" href="../index.html" aria-label="Horizonu Home">
-            <img src="../images/logo.jpg" alt="Horizonu" />
-          </a>
-          <p class="footer-text">
-            Horizonu Health &amp; Education combines high-yield NCLEX review, practical tutoring support, and a digital
-            platform designed to keep students focused and exam ready.
-          </p>
+          <a class="footer-logo" href="../index.html" aria-label="Horizonu Home"><img src="../images/logo.jpg" alt="Horizonu" /></a>
+          <p class="footer-text">Clear service options for students who want focused support.</p>
         </div>
-
         <div class="footer-col">
           <h3 class="footer-title">Quick Links</h3>
           <ul class="footer-links">
@@ -304,7 +164,6 @@
             <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h3 class="footer-title">Programs</h3>
           <ul class="footer-links">
@@ -314,38 +173,21 @@
             <li><a href="./consultation.html">Free Consultation</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h3 class="footer-title">Contact</h3>
           <ul class="footer-contact">
-            <li>
-              <span class="contact-label">Email</span>
-              <a href="mailto:hello@horizonu.com">hello@horizonu.com</a>
-            </li>
-            <li>
-              <span class="contact-label">Phone</span>
-              <a href="tel:+1234567890">+1 (234) 567-890</a>
-            </li>
-            <li>
-              <span class="contact-label">Hours</span>
-              <span>Mon-Fri | 9am-5pm</span>
-            </li>
+            <li><span class="contact-label">Email</span><a href="mailto:hello@horizonu.com">hello@horizonu.com</a></li>
+            <li><span class="contact-label">Phone</span><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><span class="contact-label">Hours</span><span>Mon-Fri | 9am-5pm</span></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p class="footer-copy">(c) <span id="year"></span> Horizonu Health &amp; Education. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <span class="dot">|</span>
-          <a href="#">Terms</a>
-        </div>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><span>|</span><a href="#">Terms</a></div>
       </div>
     </div>
   </footer>
-
   <script src="./services.js" defer></script>
 </body>
-
 </html>

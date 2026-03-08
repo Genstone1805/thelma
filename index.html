@@ -4,31 +4,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horizonu — Premium Responsive Header</title>
-
-  <!-- Link CSS -->
+  <title>Horizonu Health &amp; Education</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- CSS-only toggle -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-meta">
+        <span>hello@horizonu.com</span>
+        <span>Mon-Fri | 9am-5pm</span>
+        <span>Virtual support for RN and PN students</span>
+      </div>
+      <a href="pages/consultation.html">Book a consultation</a>
+    </div>
+  </div>
+
   <input id="menu" class="menu-toggle" type="checkbox" />
 
   <div class="header-wrap">
     <header class="header">
       <div class="header-inner">
-        <!-- Brand -->
         <a class="brand" href="index.html" aria-label="Horizonu Home">
           <div class="mark" aria-hidden="true">
-            <img src="/images/single_logo.jpg" alt="" class="logo-img" />
+            <img src="images/single_logo.jpg" alt="" class="logo-img" />
           </div>
-
           <div class="brand-title">
             <strong>Horizonu <br /> Health &amp; Education</strong>
           </div>
         </a>
 
-        <!-- Desktop nav -->
         <nav class="nav" aria-label="Primary">
           <a href="index.html" aria-current="page">Home</a>
           <a href="pages/about.html">About</a>
@@ -38,28 +43,15 @@
           <a href="pages/contact.html">Contact</a>
         </nav>
 
-        <!-- Desktop actions -->
         <div class="actions">
-          <a class="btn btn-ghost" href="#" aria-label="Student login">
-            Login
-          </a>
-
-          <a class="btn btn-primary" href="pages/consultation.html" aria-label="Book a free consultation">
-            <!-- <svg class="icon" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M7 11h10v2H7v-2Zm-2 8a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V2h2v2h8V2h2v2h1a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5Zm0-2h14a1 1 0 0 0 1-1V9H4v7a1 1 0 0 0 1 1Z"
-                fill="rgba(255,255,255,0.92)" />
-            </svg> -->
-            Free Consultation
-          </a>
+          <a class="btn btn-ghost" href="#">Login</a>
+          <a class="btn btn-primary" href="pages/consultation.html">Free Consultation</a>
         </div>
 
-        <!-- Burger -->
         <label class="burger" for="menu" aria-label="Open menu">
           <span></span><span></span><span></span>
         </label>
 
-        <!-- Mobile dropdown -->
         <div class="drop">
           <nav class="nav" aria-label="Mobile Primary">
             <a href="index.html" aria-current="page">Home</a>
@@ -80,633 +72,369 @@
     </header>
   </div>
 
-  <!-- Demo content (optional) -->
   <main>
-
-
-    <section class="home-banner" aria-label="Home Banner">
-      <div class="home-banner-bg"></div>
-
-      <div class="home-banner-content">
-        <div class="banner-top">
-          <p class="banner-kicker banner-anim delay-1">NCLEX Review & Nursing Tutoring</p>
-
-          <h1 class="banner-title banner-anim delay-2">
-            Pass NCLEX with Confidence. Study Smart. Pass Fast.
-          </h1>
-
-          <p class="banner-subtitle banner-anim delay-3">
-            High-impact NCLEX review and personalized nursing tutoring <br />
-            led by Veronica Adomaa, MSN, APRN, FNP-C.
+    <section class="hero section-white">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">NCLEX review and nursing tutoring</p>
+          <h1>Simple, structured support for students preparing to enter nursing practice with confidence.</h1>
+          <p>
+            Horizonu Health &amp; Education provides focused NCLEX review, tutoring, and consultation support led by
+            Veronica Adomaa, MSN, APRN, FNP-C.
           </p>
 
-          <div class="banner-actions banner-anim delay-3">
-            <a href="pages/services.html" class="btn btn-ghost banner-ghost">Start Tutorial</a>
-            <a href="pages/consultation.html" class="btn btn-primary">Book Free Consultation</a>
-            <a href="pages/services.html" class="btn btn-ghost banner-ghost">Join NCLEX Program</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="pages/consultation.html">Book Free Consultation</a>
+            <a class="btn btn-ghost" href="pages/services.html">View Services</a>
           </div>
 
+          <div class="hero-panel">
+            <p class="eyebrow">Why students choose Horizonu</p>
+            <ul>
+              <li>Clear study plans built around your exam timeline</li>
+              <li>Clinical reasoning support rooted in safety and prioritization</li>
+              <li>Focused instruction without unnecessary complexity</li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1400&q=80"
+            alt="Clinical educator in a hospital setting" />
         </div>
       </div>
     </section>
 
-
-    <section class="about-preview" aria-labelledby="aboutPreviewTitle">
-      <div class="about-preview-inner">
-        <!-- Left: text -->
-        <div class="about-preview-copy">
-          <p class="about-preview-kicker">About Us</p>
-
-          <h2 class="about-preview-title" id="aboutPreviewTitle">
-            Built to turn overwhelmed students into
-            <span>exam-ready nurses.</span>
-          </h2>
-
-          <p class="about-preview-text">
-            Horizonu Health &amp; Education is a modern NCLEX review and nursing tutoring platform
-            designed to build confidence through high-yield instruction, structured frameworks, and
-            strategy-first practice. We focus on critical thinking, prioritization, and clinical
-            judgment—so you’re prepared not only to pass the NCLEX, but to enter practice as a safe
-            and competent nurse.
-          </p>
-
-          <div class="about-preview-actions">
-            <a class="btn btn-primary" href="pages/about.html" aria-label="Read more about us">
-              Read More
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M13 5l7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6L13 5z" fill="rgba(255,255,255,0.92)" />
-              </svg>
-            </a>
-
-            <a class="btn btn-ghost" href="#programs" aria-label="View our programs">
-              View Programs
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: light feature card -->
-        <div class="about-preview-card" aria-hidden="true">
-          <div class="about-card-header">
-            <div class="about-card-pill">Our Approach</div>
-            <div class="about-card-title">What makes us different</div>
-          </div>
-
-          <div class="about-card-list">
-            <div class="about-card-item">
-              <span class="about-ico" aria-hidden="true"></span>
-              <div>
-                <strong>Strategy-first learning</strong>
-                <p>We teach how to break down questions and prioritize safely.</p>
-              </div>
-            </div>
-
-            <div class="about-card-item">
-              <span class="about-ico" aria-hidden="true"></span>
-              <div>
-                <strong>High-yield content</strong>
-                <p>Focused review that sticks—no overwhelm, no fluff.</p>
-              </div>
-            </div>
-
-            <div class="about-card-item">
-              <span class="about-ico" aria-hidden="true"></span>
-              <div>
-                <strong>Practice with rationales</strong>
-                <p>Timed drills, SATA practice, and clear explanations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="why" aria-labelledby="whyTitle">
-      <div class="why-inner">
-        <header class="why-head">
-          <p class="why-kicker">Why Choose Horizonu?</p>
-          <h2 class="why-title" id="whyTitle">
-            A smarter way to prepare—built for clarity, confidence, and results.
-          </h2>
-          <p class="why-subtitle">
-            We combine high-yield teaching with strategy-first practice so you learn how to think like
-            a nurse, prioritize safely, and answer NCLEX-style questions with confidence.
-          </p>
-        </header>
-
-        <div class="why-grid">
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l8 4v6c0 5-3.4 9.7-8 10-4.6-.3-8-5-8-10V6l8-4z" fill="rgba(11,31,59,0.92)"
-                  opacity="0.18" />
-                <path d="M10.3 12.7l-1.6-1.6-1.4 1.4 3 3 6-6-1.4-1.4-4.6 4.6z" fill="rgba(11,31,59,0.92)" />
-              </svg>
-            </div>
-            <h3>Framework-Based Strategies</h3>
-            <p>
-              Learn prioritization using NCSBN thinking, ABCs, Maslow, and safety standards—so your
-              answers stay consistent under pressure.
-            </p>
-          </div>
-
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V6z"
-                  fill="rgba(14,165,164,0.18)" />
-                <path d="M7 8h10v2H7V8Zm0 4h7v2H7v-2Zm0 4h10v2H7v-2Z" fill="rgba(11,31,59,0.92)" />
-              </svg>
-            </div>
-            <h3>High-Yield Content (No Overwhelm)</h3>
-            <p>
-              We focus on what actually shows up: core concepts, clinical judgment, and testable
-              patterns—taught in a simple, memorable way.
-            </p>
-          </div>
-
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3a9 9 0 1 0 9 9c0-5-4-9-9-9Z" fill="rgba(11,31,59,0.16)" />
-                <path d="M12 7a1 1 0 0 1 1 1v4.2l2.6 1.5-1 1.7-3.6-2.1V8a1 1 0 0 1 1-1Z" fill="rgba(11,31,59,0.92)" />
-              </svg>
-            </div>
-            <h3>Practice That Builds Accuracy</h3>
-            <p>
-              Timed quizzes, SATA practice, case-style questions, and clear rationales—so you improve
-              fast and retain more.
-            </p>
-          </div>
-
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" fill="rgba(14,165,164,0.18)" />
-                <path d="M12 14c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z" fill="rgba(11,31,59,0.92)" opacity="0.9" />
-              </svg>
-            </div>
-            <h3>Instructor-Led Support</h3>
-            <p>
-              Get guidance from an experienced nursing professor and board-certified FNP—so you’re not
-              studying alone or guessing what matters.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="facts" aria-label="Facts & Stats">
-      <div class="facts-bg" aria-hidden="true"></div>
-
-      <div class="facts-inner">
-        <header class="facts-head">
-          <p class="facts-kicker">Fact Checker</p>
-          <h2 class="facts-title">Numbers that reflect our impact</h2>
-        </header>
-
-        <div class="facts-grid">
-          <article class="fact-card">
-            <div class="fact-number">
-              <span class="countup" data-target="165" data-suffix="+">0</span>
-            </div>
-            <p class="fact-label">Happy Customers</p>
+    <section class="section">
+      <div class="container">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong>15+</strong>
+            <span>Years of bedside nursing experience informing practical instruction.</span>
           </article>
-
-          <article class="fact-card">
-            <div class="fact-number">
-              <span class="countup" data-target="254" data-suffix="+">0</span>
-            </div>
-            <p class="fact-label">Project Complete</p>
+          <article class="stat-card">
+            <strong>5+</strong>
+            <span>Years of college-level nursing teaching focused on student success.</span>
           </article>
-
-          <article class="fact-card">
-            <div class="fact-number">
-              <span class="countup" data-target="2" data-suffix="M+">0</span>
-            </div>
-            <p class="fact-label">Registered Member</p>
-          </article>
-
-          <article class="fact-card">
-            <div class="fact-number">
-              <span class="countup" data-target="145" data-suffix="+">0</span>
-            </div>
-            <p class="fact-label">Awards Winning</p>
+          <article class="stat-card">
+            <strong>1:1</strong>
+            <span>Personalized guidance available for timelines, weak areas, and strategy support.</span>
           </article>
         </div>
       </div>
     </section>
 
-
-    <section class="how" aria-labelledby="howTitle">
-      <div class="how-inner">
-
-        <!-- LEFT SIDE (IMAGE) -->
-        <div class="how-media">
-          <div class="how-frame">
-            <img src="/images/how-it-works.jpg" alt="Students preparing for NCLEX online" class="how-img" />
-            <div class="how-overlay"></div>
-          </div>
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Services</p>
+          <h2>Support pathways designed for clarity, structure, and practical results.</h2>
+          <p>Choose the format that fits your needs, whether you want full review support or targeted tutoring.</p>
         </div>
-
-        <!-- RIGHT SIDE (CONTENT) -->
-        <div class="how-content">
-          <p class="how-kicker">How It Works</p>
-
-          <h2 class="how-title" id="howTitle">
-            Your path to NCLEX success
-          </h2>
-
-          <p class="how-intro">
-            Our streamlined online process guides you step-by-step from enrolling in
-            expert-led lessons to completing realistic practice tests to help you
-            build knowledge, strengthen clinical judgment, and walk into your NCLEX
-            exam fully prepared and confident.
-          </p>
-
-          <div class="how-steps">
-
-            <div class="how-step">
-              <div class="how-number">01</div>
-              <div class="how-step-content">
-                <h3>Enroll & Get Instant Access</h3>
-                <p>
-                  Sign up and get instant access to our fully online NCLEX
-                  preparation platform.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step">
-              <div class="how-number">02</div>
-              <div class="how-step-content">
-                <h3>Learn Through Structured Lessons</h3>
-                <p>
-                  Progress through expertly designed video lessons and concept
-                  breakdowns aligned with current NCLEX standards.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step">
-              <div class="how-number">03</div>
-              <div class="how-step-content">
-                <h3>Take Readiness Assessments</h3>
-                <p>
-                  Sit for our comprehensive preparation test designed to simulate
-                  the real NCLEX exam experience.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step">
-              <div class="how-number">04</div>
-              <div class="how-step-content">
-                <h3>Sit for the NCLEX with Confidence</h3>
-                <p>
-                  With structured preparation, exam simulation, and consistent
-                  practice behind you, you’re fully equipped to take and pass the
-                  NCLEX.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="services" aria-labelledby="servicesTitle" id="services">
-      <div class="services-inner">
-        <header class="services-head">
-          <p class="services-kicker">Our Services</p>
-          <h2 class="services-title" id="servicesTitle">NCLEX Review Programs</h2>
-          <p class="services-subtitle">
-            Choose the support level that fits your schedule—bootcamp structure, private tutoring,
-            or weekly group coaching.
-          </p>
-        </header>
 
         <div class="services-grid">
-          <!-- Card 1 -->
-          <article class="service-card featured">
-            <div class="service-top">
-              <div class="service-badge">Most Popular</div>
-              <h3 class="service-name">Comprehensive NCLEX Bootcamp</h3>
-              <p class="service-note">
-                A high-impact, structured program built to strengthen clinical judgment and test-day confidence.
-              </p>
-            </div>
-
-            <ul class="service-list">
-              <li>High-yield content review</li>
-              <li>Test-taking strategies</li>
-              <li>Prioritization &amp; delegation mastery</li>
-              <li>Case study breakdowns</li>
-              <li>Practice question sessions</li>
-            </ul>
-
-            <div class="service-actions">
-              <a class="btn btn-primary" href="pages/consultation.html">Get Started</a>
-              <a class="btn btn-ghost" href="pages/services.html">Learn More</a>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
           <article class="service-card">
-            <div class="service-top">
-              <div class="service-badge soft">1:1 Support</div>
-              <h3 class="service-name">One-on-One NCLEX Tutoring</h3>
-              <p class="service-note">
-                Personalized guidance that targets your weak areas and improves accuracy faster.
-              </p>
-            </div>
-
-            <ul class="service-list">
-              <li>Personalized study plan</li>
-              <li>Weak-area identification</li>
-              <li>Remediation strategies</li>
-              <li>Live question walkthroughs</li>
-            </ul>
-
-            <div class="service-actions">
-              <a class="btn btn-primary" href="pages/consultation.html">Book Session</a>
-              <a class="btn btn-ghost" href="pages/services.html">Learn More</a>
-            </div>
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80"
+              alt="Students studying together" />
+            <h3>NCLEX Bootcamp</h3>
+            <p>Comprehensive review for students who want guided instruction, question practice, and accountability.</p>
+            <a href="pages/services.html">Learn more</a>
           </article>
-
-          <!-- Card 3 -->
           <article class="service-card">
-            <div class="service-top">
-              <div class="service-badge soft">Weekly Coaching</div>
-              <h3 class="service-name">Group NCLEX Coaching</h3>
-              <p class="service-note">
-                Weekly live sessions to build consistency, strategy, and accountability.
-              </p>
-            </div>
-
-            <ul class="service-list">
-              <li>Weekly live sessions</li>
-              <li>Strategy-focused review</li>
-              <li>High-yield topics</li>
-              <li>Accountability support</li>
-            </ul>
-
-            <div class="service-actions">
-              <a class="btn btn-primary" href="pages/consultation.html">Join Coaching</a>
-              <a class="btn btn-ghost" href="pages/services.html">Learn More</a>
-            </div>
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80"
+              alt="Nurse mentor working with a learner" />
+            <h3>One-on-One Tutoring</h3>
+            <p>Personalized help for weak areas, question strategy, pharmacology, and remediation planning.</p>
+            <a href="pages/services.html">Learn more</a>
+          </article>
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80"
+              alt="Student in an online learning session" />
+            <h3>Group Coaching</h3>
+            <p>Weekly guided support for students who want consistency, structure, and community while preparing.</p>
+            <a href="pages/services.html">Learn more</a>
           </article>
         </div>
-
       </div>
     </section>
 
-    <section class="testimonials" aria-label="Testimonies">
-      <div class="testimonials-bg" aria-hidden="true"></div>
+    <section class="section">
+      <div class="container split-grid">
+        <div class="content-image">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80"
+            alt="Healthcare educator teaching with a tablet" />
+        </div>
 
-      <div class="testimonials-inner">
-        <header class="testimonials-head">
-          <p class="testimonials-kicker">Testimonies</p>
-          <h2 class="testimonials-title">What our students are saying</h2>
-          <p class="testimonials-subtitle">
-            Real stories from learners who studied with clarity and walked into NCLEX confident.
+        <div>
+          <p class="eyebrow">About the Founder</p>
+          <h2>Instruction shaped by bedside nursing, classroom teaching, and student mentorship.</h2>
+          <p>
+            Veronica Adomaa built Horizonu Health &amp; Education to help students move from overwhelm to organized,
+            exam-ready confidence through clear teaching and practical strategy.
           </p>
-        </header>
+          <ul class="check-list">
+            <li>Breaks down complex concepts into manageable learning blocks</li>
+            <li>Teaches question analysis through safety and prioritization</li>
+            <li>Supports students with a calm, structured preparation process</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="pages/about.html">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="t-slider" data-slider>
-          <button class="t-nav t-prev" type="button" aria-label="Previous testimony" data-prev>
-            ‹
-          </button>
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How It Works</p>
+          <h2>A straightforward process built around preparation and confidence.</h2>
+        </div>
 
-          <div class="t-viewport" aria-live="polite">
-            <!-- Slide 1 -->
-            <article class="t-slide is-active" data-slide>
-              <div class="t-card">
-                <p class="t-quote">
-                  “Horizonu made NCLEX questions finally make sense. The prioritization framework
-                  changed how I answered everything—and I passed on my first attempt.”
-                </p>
-                <div class="t-meta">
-                  <div class="t-avatar" aria-hidden="true">A</div>
-                  <div>
-                    <strong class="t-name">Amara</strong>
-                    <span class="t-role">NCLEX Candidate</span>
-                  </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span>01</span>
+            <h3>Book a consultation</h3>
+            <p>Discuss your exam timeline, weak areas, and current study concerns.</p>
+          </article>
+          <article class="step-card">
+            <span>02</span>
+            <h3>Receive a plan</h3>
+            <p>Get a recommended service path and a clearer structure for your preparation.</p>
+          </article>
+          <article class="step-card">
+            <span>03</span>
+            <h3>Study with purpose</h3>
+            <p>Work through focused review, practical frameworks, and question practice.</p>
+          </article>
+          <article class="step-card">
+            <span>04</span>
+            <h3>Test with confidence</h3>
+            <p>Approach the exam with stronger strategy, better organization, and more calm.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head-row">
+          <div>
+            <p class="eyebrow">Testimonials</p>
+            <h2>What students appreciate most about the process.</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Testimonial controls">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous testimonials">Prev</button>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Next testimonials">Next</button>
+          </div>
+        </div>
+
+        <div class="testimonial-carousel" data-carousel>
+          <div class="testimonial-viewport">
+            <div class="testimonial-track" data-carousel-track>
+              <div class="testimonial-slide is-active" data-slide>
+                <div class="testimonial-cards">
+                  <article class="testimonial-card">
+                    <p>"The structure made the biggest difference for me. I stopped guessing and finally felt organized."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Amara" />
+                      <div>
+                        <strong>Amara</strong>
+                        <span>NCLEX candidate</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="testimonial-card">
+                    <p>"The teaching was direct and practical. Prioritization became much clearer after tutoring."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Janelle" />
+                      <div>
+                        <strong>Janelle</strong>
+                        <span>New graduate nurse</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="testimonial-card">
+                    <p>"I appreciated how simple the process felt. I always knew what I needed to focus on next."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Daniel" />
+                      <div>
+                        <strong>Daniel</strong>
+                        <span>Repeat test taker</span>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
-            </article>
 
-            <!-- Slide 2 -->
-            <article class="t-slide" data-slide>
-              <div class="t-card">
-                <p class="t-quote">
-                  “The lessons were clear, the rationales were gold, and the practice tests felt like the real exam.
-                  I stopped guessing and started thinking like a nurse.”
-                </p>
-                <div class="t-meta">
-                  <div class="t-avatar" aria-hidden="true">J</div>
-                  <div>
-                    <strong class="t-name">Janelle</strong>
-                    <span class="t-role">New Grad Nurse</span>
-                  </div>
+              <div class="testimonial-slide" data-slide>
+                <div class="testimonial-cards">
+                  <article class="testimonial-card">
+                    <p>"My sessions felt calm and very specific. I knew exactly what to review between meetings."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Ruth" />
+                      <div>
+                        <strong>Ruth</strong>
+                        <span>Senior nursing student</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="testimonial-card">
+                    <p>"I finally understood how to answer questions safely instead of memorizing random facts."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Michael" />
+                      <div>
+                        <strong>Michael</strong>
+                        <span>First-time test taker</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="testimonial-card">
+                    <p>"The feedback was honest, encouraging, and practical. That helped me rebuild my confidence."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Esther" />
+                      <div>
+                        <strong>Esther</strong>
+                        <span>Remediation student</span>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
-            </article>
 
-            <!-- Slide 3 -->
-            <article class="t-slide" data-slide>
-              <div class="t-card">
-                <p class="t-quote">
-                  “One-on-one tutoring helped me identify my weak areas fast. I got a plan, followed it,
-                  and went into test day confident and calm.”
-                </p>
-                <div class="t-meta">
-                  <div class="t-avatar" aria-hidden="true">K</div>
-                  <div>
-                    <strong class="t-name">Kemi</strong>
-                    <span class="t-role">Repeat Test Taker</span>
-                  </div>
+              <div class="testimonial-slide" data-slide>
+                <div class="testimonial-cards">
+                  <article class="testimonial-card">
+                    <p>"I liked that everything was broken into manageable steps. It made studying feel realistic."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Sophia" />
+                      <div>
+                        <strong>Sophia</strong>
+                        <span>Bootcamp student</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="testimonial-card">
+                    <p>"The sessions helped me connect nursing content with how the exam actually tests judgment."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Kelvin" />
+                      <div>
+                        <strong>Kelvin</strong>
+                        <span>International student</span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="testimonial-card">
+                    <p>"I went from overwhelmed to steady. The plan gave me momentum, and the tutoring kept me accountable."</p>
+                    <div class="testimonial-person">
+                      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+                        alt="Portrait of Nadia" />
+                      <div>
+                        <strong>Nadia</strong>
+                        <span>Group coaching participant</span>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
 
-          <button class="t-nav t-next" type="button" aria-label="Next testimony" data-next>
-            ›
-          </button>
-
-          <div class="t-dots" role="tablist" aria-label="Testimony navigation" data-dots></div>
+          <div class="carousel-dots" data-carousel-dots aria-label="Testimonial slides"></div>
         </div>
       </div>
     </section>
 
-    <section class="faq" id="faq" aria-labelledby="faqTitle">
-      <div class="faq-inner">
-        <header class="faq-head">
-          <p class="faq-kicker">FAQ</p>
-          <h2 class="faq-title" id="faqTitle">Frequently Asked Questions</h2>
-          <p class="faq-subtitle">
-            Quick answers to common questions about our NCLEX programs, tutoring, and access.
-          </p>
-        </header>
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Frequently Asked Questions</p>
+          <h2>Common questions from students preparing for support.</h2>
+        </div>
 
-        <div class="faq-grid">
-          <!-- Left: accordion -->
-          <div class="faq-accordion" role="region" aria-label="FAQ Accordion">
-            <details class="faq-item" open>
-              <summary class="faq-q">
-                <span>Is Horizonu fully online?</span>
-                <span class="faq-plus" aria-hidden="true"></span>
-              </summary>
-              <div class="faq-a">
-                Yes. All lessons, resources, and practice activities are online, so you can study anywhere and anytime.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q">
-                <span>What’s included in the Comprehensive NCLEX Bootcamp?</span>
-                <span class="faq-plus" aria-hidden="true"></span>
-              </summary>
-              <div class="faq-a">
-                High-yield content review, strategy lessons, prioritization &amp; delegation mastery, case breakdowns,
-                and practice question sessions with clear rationales.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q">
-                <span>Do you offer one-on-one tutoring?</span>
-                <span class="faq-plus" aria-hidden="true"></span>
-              </summary>
-              <div class="faq-a">
-                Yes. One-on-one tutoring includes a personalized study plan, weak-area identification, remediation
-                strategies,
-                and live question walkthroughs.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q">
-                <span>How do I know which program is best for me?</span>
-                <span class="faq-plus" aria-hidden="true"></span>
-              </summary>
-              <div class="faq-a">
-                If you’re unsure, book a free consultation. We’ll ask about your timeline, strengths, and weak areas,
-                then recommend the best plan.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q">
-                <span>Do you provide practice tests that simulate the real NCLEX?</span>
-                <span class="faq-plus" aria-hidden="true"></span>
-              </summary>
-              <div class="faq-a">
-                Yes. Our readiness assessments are designed to mirror NCLEX style, pacing, and decision-making so you
-                can
-                practice under realistic conditions.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q">
-                <span>Can I study at my own pace?</span>
-                <span class="faq-plus" aria-hidden="true"></span>
-              </summary>
-              <div class="faq-a">
-                Yes. You can move through lessons at your pace, and use quizzes and rationales to reinforce learning.
-                Group coaching adds weekly live accountability.
-              </div>
-            </details>
-          </div>
-
-          <!-- Right: support card -->
-          <aside class="faq-side" aria-label="Need more help?">
-            <div class="faq-side-card">
-              <p class="faq-side-kicker">Need more help?</p>
-              <h3 class="faq-side-title">Ask us anything.</h3>
-              <p class="faq-side-text">
-                If your question isn’t listed here, send us a message and we’ll respond as soon as possible.
-              </p>
-
-              <div class="faq-side-actions">
-                <a class="btn btn-primary" href="pages/contact.html">Contact Us</a>
-                <a class="btn btn-ghost" href="pages/consultation.html">Free Consultation</a>
-              </div>
-
-              <div class="faq-side-mini">
-                <div class="mini-row">
-                  <span class="mini-dot" aria-hidden="true"></span>
-                  <span>Fast responses</span>
-                </div>
-                <div class="mini-row">
-                  <span class="mini-dot" aria-hidden="true"></span>
-                  <span>Guidance based on your timeline</span>
-                </div>
-                <div class="mini-row">
-                  <span class="mini-dot" aria-hidden="true"></span>
-                  <span>Clear recommendations</span>
-                </div>
-              </div>
+        <div class="faq-preview">
+          <details class="faq-item">
+            <summary>How do I know which program fits me best?</summary>
+            <div class="faq-answer">
+              <p>A consultation is the best first step if you need help choosing the right level of support.</p>
             </div>
-          </aside>
+          </details>
+          <details class="faq-item">
+            <summary>Can I get help before I reach the NCLEX stage?</summary>
+            <div class="faq-answer">
+              <p>Yes. Support is available for nursing school content, remediation, and readiness planning.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you provide study materials and guided practice?</summary>
+            <div class="faq-answer">
+              <p>Yes. Depending on the service, students receive materials, structured guidance, and question review support.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
+    <section class="section">
+      <div class="container quick-grid">
+        <article class="quick-card">
+          <h3>Consultation</h3>
+          <p>Start with a clear conversation about your current needs and exam timeline.</p>
+          <a href="pages/consultation.html">Book now</a>
+        </article>
+        <article class="quick-card">
+          <h3>Services</h3>
+          <p>Review the available tutoring, coaching, and structured review options.</p>
+          <a href="pages/services.html">Explore services</a>
+        </article>
+        <article class="quick-card">
+          <h3>Contact</h3>
+          <p>Send a message if you need help understanding the best next step.</p>
+          <a href="pages/contact.html">Contact us</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="cta-banner-overlay">
+        <div class="container cta-banner-inner">
+          <div class="cta-banner-copy">
+            <p class="eyebrow">Begin Here</p>
+            <h2>Book a consultation and create a simpler, more focused path to readiness.</h2>
+            <p>
+              Start with a clear conversation about your timeline, pressure points, and the kind of support that will
+              help you move forward with more confidence.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="pages/consultation.html">Schedule Consultation</a>
+              <a class="btn btn-ghost" href="pages/contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" aria-label="Footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <!-- Brand + short text -->
         <div class="footer-col footer-brand">
           <a class="footer-logo" href="index.html" aria-label="Horizonu Home">
-            <img src="/images/logo.jpg" alt="Horizonu" />
+            <img src="images/logo.jpg" alt="Horizonu" />
           </a>
-
           <p class="footer-text">
-            Horizonu Health &amp; Education is a modern NCLEX review and nursing tutoring platform
-            built to strengthen clinical judgment, boost confidence, and help you pass NCLEX with clarity.
+            Horizonu Health &amp; Education offers structured NCLEX review and nursing tutoring with a clear, student-friendly approach.
           </p>
-
-          <div class="footer-social" aria-label="Social links">
-            <a href="#" aria-label="Instagram" class="social-btn">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path
-                  d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Z"
-                  fill="rgba(11,18,32,0.10)" />
-                <path
-                  d="M12 8.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2Zm0 6.2A2.4 2.4 0 1 1 14.4 12 2.4 2.4 0 0 1 12 14.4ZM16.7 7.1a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9Z"
-                  fill="rgba(11,31,59,0.92)" />
-              </svg>
-            </a>
-
-            <a href="#" aria-label="Facebook" class="social-btn">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" fill="rgba(11,18,32,0.10)" />
-                <path
-                  d="M13.1 12.9h1.7l.3-2h-2v-1.3c0-.6.2-1 .9-1H15V6.7a12 12 0 0 0-1.5-.1c-1.5 0-2.5.9-2.5 2.7v1.6H9.4v2h1.6V18h2.1v-5.1Z"
-                  fill="rgba(11,31,59,0.92)" />
-              </svg>
-            </a>
-
-            <a href="#" aria-label="YouTube" class="social-btn">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path
-                  d="M21.5 8.2a3 3 0 0 0-2.1-2.1C17.6 5.6 12 5.6 12 5.6s-5.6 0-7.4.5A3 3 0 0 0 2.5 8.2 31.8 31.8 0 0 0 2.2 12a31.8 31.8 0 0 0 .3 3.8 3 3 0 0 0 2.1 2.1c1.8.5 7.4.5 7.4.5s5.6 0 7.4-.5a3 3 0 0 0 2.1-2.1A31.8 31.8 0 0 0 21.8 12a31.8 31.8 0 0 0-.3-3.8Z"
-                  fill="rgba(11,18,32,0.10)" />
-                <path d="M10.4 14.8V9.2L15.2 12l-4.8 2.8Z" fill="rgba(11,31,59,0.92)" />
-              </svg>
-            </a>
-          </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
           <h3 class="footer-title">Quick Links</h3>
           <ul class="footer-links">
@@ -718,7 +446,6 @@
           </ul>
         </div>
 
-        <!-- Programs -->
         <div class="footer-col">
           <h3 class="footer-title">Programs</h3>
           <ul class="footer-links">
@@ -729,7 +456,6 @@
           </ul>
         </div>
 
-        <!-- Contact -->
         <div class="footer-col">
           <h3 class="footer-title">Contact</h3>
           <ul class="footer-contact">
@@ -743,39 +469,21 @@
             </li>
             <li>
               <span class="contact-label">Hours</span>
-              <span>Mon–Fri • 9am–5pm</span>
+              <span>Mon-Fri | 9am-5pm</span>
             </li>
           </ul>
-
-          <form class="footer-form" action="#" method="post" aria-label="Newsletter">
-            <label class="footer-form-label" for="newsletterEmail">Join our newsletter</label>
-            <div class="footer-form-row">
-              <input id="newsletterEmail" class="footer-input" type="email" placeholder="Enter your email"
-                autocomplete="email" required />
-              <button class="footer-submit" type="submit">Subscribe</button>
-            </div>
-            <p class="footer-form-note">No spam. Just study tips and updates.</p>
-          </form>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">
-          © <span id="year"></span> Horizonu Health &amp; Education. All rights reserved.
-        </p>
-
+        <p class="footer-copy">(c) <span id="year"></span> Horizonu Health &amp; Education. All rights reserved.</p>
         <div class="footer-legal">
           <a href="#">Privacy Policy</a>
-          <span class="dot">•</span>
+          <span class="dot">|</span>
           <a href="#">Terms</a>
         </div>
       </div>
     </div>
-
-    <script>
-      // simple year helper (no external JS)
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
 
   <script src="scripts.js" defer></script>
