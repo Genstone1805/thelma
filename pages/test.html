@@ -1,219 +1,474 @@
-<!DOCTYPE html>
-<html>
+<style>
+  #ghl-collections {
+    width: 100%;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
 
-<head>
-  <meta charset="UTF-8">
-  <title>Payment Processing Update</title>
-  <style>
-    body {
-      margin: 0;
-      background: #f4f6f9;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
+  #ghl-collections * {
+    box-sizing: border-box;
+  }
+
+  #ghl-collections .collections-shell {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  #ghl-collections .collections-head {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+  }
+
+  #ghl-collections .collections-head h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+  }
+
+  #ghl-collections .collections-head p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #6b7280;
+  }
+
+  #ghl-collections .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-height: 640px;
+    overflow-y: auto;
+    padding: 12px;
+    background: #fff;
+  }
+
+  @media (min-width: 900px) {
+    #ghl-collections .collections-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  #ghl-collections .product-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: .2s ease;
+  }
+
+  #ghl-collections .product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    border-color: rgba(109, 94, 252, 0.22);
+  }
+
+  #ghl-collections .product-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f8fafc;
+    overflow: hidden;
+  }
+
+  #ghl-collections .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #f3f4f6;
+  }
+
+  #ghl-collections .product-image-fallback {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    color: #6b7280;
+    background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  }
+
+  #ghl-collections .product-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  #ghl-collections .product-name {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #111827;
+  }
+
+  #ghl-collections .product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  #ghl-collections .product-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    background: #f3f4f6;
+    color: #374151;
+  }
+
+  #ghl-collections .product-badge.instore {
+    background: #ecfdf5;
+    color: #047857;
+  }
+
+  #ghl-collections .product-badge.type {
+    background: #eef2ff;
+    color: #4338ca;
+  }
+
+  #ghl-collections .product-desc {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  #ghl-collections .product-footer {
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  #ghl-collections .product-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #111827;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: .2s ease;
+  }
+
+  #ghl-collections .product-link:hover {
+    background: #f5f5ff;
+    color: #6d5efc;
+    border-color: rgba(109, 94, 252, 0.24);
+  }
+
+  #ghl-collections .collections-state {
+    padding: 28px 16px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+  }
+
+  #ghl-collections .collections-state strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #111827;
+    font-size: 16px;
+  }
+
+  #ghl-collections .collections-debug {
+    margin-top: 12px;
+    text-align: left;
+    background: #0f172a;
+    color: #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  #ghl-collections .collections-skeleton {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  @media (min-width: 900px) {
+    #ghl-collections .collections-skeleton {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  #ghl-collections .skeleton-card {
+    border: 1px solid #edf0f5;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  #ghl-collections .skeleton-image {
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(90deg, #eef2f7 25%, #f7f9fc 37%, #eef2f7 63%);
+    background-size: 400% 100%;
+    animation: ghlCollectionsShimmer 1.4s ease infinite;
+  }
+
+  #ghl-collections .skeleton-lines {
+    padding: 12px;
+  }
+
+  #ghl-collections .skeleton-line {
+    height: 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #eef2f7 25%, #f7f9fc 37%, #eef2f7 63%);
+    background-size: 400% 100%;
+    animation: ghlCollectionsShimmer 1.4s ease infinite;
+  }
+
+  #ghl-collections .skeleton-line:last-child {
+    margin-bottom: 0;
+    width: 70%;
+  }
+
+  @keyframes ghlCollectionsShimmer {
+    0% {
+      background-position: 100% 0;
     }
 
-    .wrapper {
-      max-width: 620px;
-      margin: auto;
-      background: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    100% {
+      background-position: 0 0;
+    }
+  }
+</style>
+
+
+
+
+<section id="ghl-collections"></section>
+
+<script>
+  (function () {
+    const API_BASE = "https://services.leadconnectorhq.com/products/";
+
+    const API_VERSION = "2021-07-28";
+    const API_TOKEN = "pit-af5def25-8ee8-46d8-9434-fec831db5a37";
+    const LOCATION_ID = "De8rI8znhXkZ638cZqKe";
+    const DEFAULT_COLLECTION_SLUG = "candida-support";
+    const LIMIT = 100;
+
+    const root = document.getElementById("ghl-collections");
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
     }
 
-    .header {
-      background: #1e6fff;
-      padding: 24px;
-      color: #fff;
-      text-align: center;
+    function getQueryParam(name) {
+      try {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      } catch (e) {
+        return null;
+      }
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 0.4px;
+    function stripHtml(html) {
+      const div = document.createElement("div");
+      div.innerHTML = html || "";
+      return (div.textContent || div.innerText || "").replace(/\s+/g, " ").trim();
     }
 
-    .content {
-      padding: 30px 28px;
+    function truncate(text, maxLength) {
+      const value = String(text || "").trim();
+      if (!value) return "";
+      if (value.length <= maxLength) return value;
+      return value.slice(0, maxLength).trim() + "…";
     }
 
-    .greeting {
-      font-size: 16px;
-      margin-bottom: 14px;
+    function productUrl(product) {
+      const slug = product.slug || "";
+      const id = product._id || "";
+
+      if (window.location.hostname.includes("app.gohighlevel.com")) {
+        return "/v2/preview/pOkGeGXUtLZ5x7z66vwH?product=" + encodeURIComponent(slug) + "&id=" + encodeURIComponent(id);
+      } else {
+        return "/pOkGeGXUtLZ5x7z66vwH?product=" + encodeURIComponent(slug) + "&id=" + encodeURIComponent(id);
+      }
     }
 
-    .message {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    function renderLoading() {
+      root.innerHTML = `
+        <div class="collections-shell">
+          <div class="collections-head">
+            <h3>Products</h3>
+            <p>Loading category products...</p>
+          </div>
+          <div class="collections-skeleton">
+            ${Array.from({ length: 8 }).map(() => `
+              <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-lines">
+                  <div class="skeleton-line" style="width: 90%;"></div>
+                  <div class="skeleton-line" style="width: 60%;"></div>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
     }
 
-    .amount-box {
-      background: #f6f9ff;
-      border: 1px solid #dfe8ff;
-      padding: 20px;
-      text-align: center;
-      border-radius: 6px;
-      margin-bottom: 26px;
+    function renderError(message, debug) {
+      root.innerHTML = `
+        <div class="collections-shell">
+          <div class="collections-head">
+            <h3>Products</h3>
+            <p>Unable to load category products</p>
+          </div>
+          <div class="collections-state">
+            <strong>Unable to load products</strong>
+            <div>${escapeHtml(message)}</div>
+            ${debug ? `<div class="collections-debug">${escapeHtml(debug)}</div>` : ""}
+          </div>
+        </div>
+      `;
     }
 
-    .amount-box h2 {
-      margin: 0;
-      font-size: 34px;
-      color: #1e6fff;
+    function renderProducts(payload) {
+      const products = Array.isArray(payload.products) ? payload.products : [];
+      const collectionName = payload.collection && payload.collection.name ? payload.collection.name : "Category Products";
+      const total = Array.isArray(payload.total) && payload.total[0] && typeof payload.total[0].total !== "undefined"
+        ? Number(payload.total[0].total)
+        : products.length;
+
+      console.log("PAYLOAD", payload)
+      root.innerHTML = `
+        <div class="collections-shell">
+          <div class="collections-head">
+            <h3>${escapeHtml(collectionName)}</h3>
+            <p>${total} product${total !== 1 ? "s" : ""} available</p>
+          </div>
+          <div class="collections-grid">
+            ${products.map(product => {
+        const description = truncate(stripHtml(product.description || ""), 130);
+        const hasImage = !!product.image;
+        return `
+                <div class="product-card">
+                  <div class="product-image-wrap">
+                    ${hasImage
+            ? `<img class="product-image" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name || "Product image")}" loading="lazy" />`
+            : `<div class="product-image-fallback">No image</div>`
+          }
+                  </div>
+
+                  <div class="product-body">
+                    <h4 class="product-name">${escapeHtml(product.name || "Untitled Product")}</h4>
+
+                    <div class="product-meta">
+                      ${product.availableInStore ? `<span class="product-badge instore">In Store</span>` : ""}
+                      ${product.productType ? `<span class="product-badge type">${escapeHtml(product.productType)}</span>` : ""}
+                    </div>
+
+                    ${description ? `<p class="product-desc">${escapeHtml(description)}</p>` : ""}
+
+                    <div class="product-footer">
+                      <a class="product-link" href="${escapeHtml(productUrl(product))}">
+                        View Product
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              `;
+      }).join("")}
+          </div>
+        </div>
+      `;
     }
 
-    .status {
-      text-align: center;
-      font-size: 15px;
-      margin-bottom: 24px;
+    async function fetchProductsByCollection(collectionSlug) {
+      const url = new URL(API_BASE);
+      url.searchParams.set("limit", String(LIMIT));
+      url.searchParams.set("locationId", LOCATION_ID);
+      url.searchParams.set("collectionSlug", collectionSlug);
+      url.searchParams.set("availableInStore", "true");
+      url.searchParams.set("sortOrder", "asc");
+
+
+
+      const response = await fetch(url.toString(), {
+        method: "GET",
+        headers: {
+          "Accept": "application/json",
+          "Version": API_VERSION,
+          "Authorization": "Bearer " + API_TOKEN
+        }
+      });
+
+      const text = await response.text();
+      let json = null;
+
+      try {
+        json = text ? JSON.parse(text) : null;
+      } catch (e) { }
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status + " " + response.statusText + "\\n\\n" + text.slice(0, 1200));
+      }
+
+      if (!json) {
+        throw new Error("Endpoint did not return valid JSON.\\n\\n" + text.slice(0, 1200));
+      }
+
+      return json;
     }
 
-    .summary {
-      border-collapse: collapse;
-      width: 100%;
-      margin-bottom: 24px;
+    async function init() {
+      renderLoading();
+
+      if (!API_TOKEN || API_TOKEN === "REPLACE_WITH_YOUR_TOKEN") {
+        renderError("Set your bearer token in API_TOKEN.");
+        return;
+      }
+
+      const collectionSlug = getQueryParam("collection") || DEFAULT_COLLECTION_SLUG;
+
+      try {
+        const json = await fetchProductsByCollection(collectionSlug);
+        const products = Array.isArray(json.products) ? json.products : [];
+
+        if (!products.length) {
+          renderError(
+            'No products were returned for collection "' + collectionSlug + '".',
+            JSON.stringify(json, null, 2).slice(0, 3000)
+          );
+          return;
+        }
+
+        renderProducts(json);
+      } catch (error) {
+        renderError(
+          error && error.message ? error.message : "Unknown error"
+        );
+      }
     }
 
-    .summary td {
-      border: 1px solid #e6e6e6;
-      padding: 12px;
-      font-size: 14px;
-    }
-
-    .summary td:first-child {
-      background: #f9fafc;
-      font-weight: bold;
-      width: 45%;
-    }
-
-    .notice {
-      background: #fff7e6;
-      border-left: 4px solid #ffa500;
-      padding: 14px;
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-
-    .cta {
-      text-align: center;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 26px;
-      background: #1e6fff;
-      color: #fff !important;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-
-    .footer {
-      background: #fafafa;
-      padding: 18px;
-      text-align: center;
-      font-size: 13px;
-      color: #777;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="wrapper">
-
-    <div class="header">
-      <h1>Payment Processing Notification</h1>
-    </div>
-
-    <div class="content">
-
-      <div class="greeting">
-        Dear <strong>KELLY LLOYD</strong>,
-      </div>
-
-      <div class="message">
-        Your withdrawal request is currently being processed by our secure payment network.
-      </div>
-
-      <div class="amount-box">
-        <h2>GBP £42,000.00</h2>
-        <div>Withdrawal Amount</div>
-      </div>
-
-      <div class="status">
-        Status: <strong style="color:#f39c12;">Pending Final Verification</strong>
-      </div>
-
-      <table class="summary">
-        <tr>
-          <td>Account Name</td>
-          <td>KELLY LLOYD</td>
-        </tr>
-
-        <tr>
-          <td>Description</td>
-          <td>W/D fee £4,199.99 final stage withdrawal fee settlement</td>
-        </tr>
-
-        <tr>
-          <td>Reference Number</td>
-          <td>5958-fa99be722d3d549f1925bec175</td>
-        </tr>
-
-        <tr>
-          <td>Transaction Date</td>
-          <td>14-AUG-2025</td>
-        </tr>
-
-        <tr>
-          <td>Value Date</td>
-          <td>14-AUG-2025</td>
-        </tr>
-
-        <tr>
-          <td>Network Processing Fee</td>
-          <td>0.018</td>
-        </tr>
-
-        <tr>
-          <td>A/C & S/C Number</td>
-          <td>853***90 & 09-**-36</td>
-        </tr>
-
-        <tr>
-          <td>Reference Number</td>
-          <td>
-            5958-
-            fa99be722d3d549f1925bec175
-            d46627045146ecf1b-
-            f96986bce74
-            cae1e3
-          </td>
-        </tr>
-      </table>
-
-      <div class="notice">
-        To proceed with your payout, a final processing step is required to complete the withdrawal verification and
-        release the funds.
-      </div>
-
-      <div class="cta">
-        <a href="/" class="button">Complete Final Processing Step</a>
-      </div>
-
-    </div>
-
-    <div class="footer">
-      This notification was generated automatically by the payment processing system.<br>
-      If you did not request this transaction, please contact support immediately.
-    </div>
-
-  </div>
-
-</body>
-
-</html>
+    init();
+  })();
+</script>
