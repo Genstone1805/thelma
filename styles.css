@@ -826,6 +826,7 @@ p {
   list-style: none;
   color: var(--navy);
   font-weight: 800;
+  text-align: left;
 }
 
 .faq-item summary::after {
@@ -862,6 +863,7 @@ p {
 .faq-answer p {
   margin: 0;
   padding: 0 0 20px;
+  text-align: left;
 }
 
 .cta-banner {

@@ -9,6 +9,7 @@
       if (element.dataset.textSplit === "true") return;
       if (element.children.length > 0) return;
       if (element.closest(".step-card")) return;
+      if (element.closest(".faq-item")) return;
 
       const text = element.textContent.replace(/\s+/g, " ").trim();
       if (!text) return;

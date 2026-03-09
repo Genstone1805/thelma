@@ -20,6 +20,7 @@
   padding: 20px 0;
   color: var(--page-heading);
   font-weight: 700;
+  text-align: left;
 }
 
 .faq-item summary::after {
@@ -52,4 +53,5 @@
   transition:
     height var(--page-transition-smooth),
     opacity 220ms ease;
+  text-align: left;
 }
